@@ -233,6 +233,16 @@ footer{padding:52px 0 60px;border-top:1px solid var(--line);font-size:13.8px;col
 .fmeta .fl{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink3);flex:none;width:58px}
 .fmeta a{color:var(--acc);word-break:break-word}
 .fmeta a:hover{text-decoration:underline}
+
+/* ---------- live portal section ---------- */
+.portal-demo .pcard{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,48px);align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,4vw,48px);box-shadow:0 24px 60px -30px rgba(80,20,45,.28)}
+.portal-demo .pcard h2{margin:12px 0 14px}
+.portal-demo .live{display:inline-flex;align-items:center;gap:7px}
+.portal-demo .live i{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--accsoft)}
+.portal-demo .pprev{display:block;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px;transition:transform .15s,box-shadow .15s}
+.portal-demo .pprev:hover{transform:translateY(-2px);box-shadow:0 18px 40px -24px rgba(80,20,45,.35)}
+.portal-demo .pnote{font-size:13.5px;color:var(--ink3);margin-top:6px}
+@media (max-width:860px){.portal-demo .pcard{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -288,6 +298,7 @@ footer{padding:52px 0 60px;border-top:1px solid var(--line);font-size:13.8px;col
           </div>
         </div>
       </div>
+      <a class="nlink" href="portal/">Demo</a>
       <a class="nlink" href="#/conditions">Clinical scope</a>
       <a class="nlink" href="#/about">About</a>
       <a class="nlink" href="#/careers">Careers</a>
@@ -321,6 +332,7 @@ footer{padding:52px 0 60px;border-top:1px solid var(--line);font-size:13.8px;col
     <a class="mrow" href="#/pilots"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19l7-14 7 14z"/></svg></span><span><span class="mt">Pilot programme</span></span></a>
   </div>
   <div class="dgroup"><div class="mtitle">Company</div>
+    <a class="mrow" href="portal/"><span><span class="mt">Live demo: CDSS portal</span></span></a>
     <a class="mrow" href="#/conditions"><span><span class="mt">Clinical scope</span></span></a>
     <a class="mrow" href="#/about"><span><span class="mt">About</span></span></a>
     <a class="mrow" href="#/careers"><span><span class="mt">Careers</span></span></a>
@@ -342,6 +354,7 @@ footer{padding:52px 0 60px;border-top:1px solid var(--line);font-size:13.8px;col
         <p class="lede"><strong style="font-family:var(--sans);font-weight:600;color:var(--ink)">Seven minutes to explain seven years.</strong> The intelligence layer between experiencing a symptom and receiving appropriate care. Valkyria turns a woman's lived history into structured clinical evidence her doctor can act on &mdash; and tells her, clearly, when it is time to go.</p>
         <div class="hcta">
           <button class="btn bp" type="button" data-form="waitlist">Join the waitlist</button>
+          <a class="btn bd" href="portal/">Try the live portal</a>
           <a class="btn bs" href="#/clinical-decision-support">See how it works</a>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
@@ -390,6 +403,34 @@ footer{padding:52px 0 60px;border-top:1px solid var(--line);font-size:13.8px;col
       </div>
     </div>
   </div>
+
+  <!-- ================= LIVE PORTAL ================= -->
+  <section class="portal-demo" id="live-portal">
+    <div class="wrap">
+      <div class="pcard">
+        <div>
+          <span class="eyebrow live"><i aria-hidden="true"></i>Live demo · No sign-up</span>
+          <h2>Try the clinical decision support portal.</h2>
+          <p class="lede">Log your cycle and symptoms as a patient, then switch sides and see what her gynaecologist sees: alerts sorted by urgency, the evidence behind each one, and how the doctor&rsquo;s input updates her app.</p>
+          <div class="hcta" style="margin-bottom:8px">
+            <a class="btn bp" href="portal/">Open the portal</a>
+            <a class="btn bs" href="portal/#patient">Start as a patient</a>
+            <a class="btn bs" href="portal/#doctor">Doctor view</a>
+          </div>
+          <p class="pnote">Every person and value in the demo is fictional. The rules are samples awaiting clinical sign-off.</p>
+        </div>
+        <a class="pprev" href="portal/#doctor" aria-label="Open the doctor view of the portal">
+          <svg viewBox="0 0 520 340" role="img" aria-label="Preview of the doctor view: five sample patients sorted by urgency">
+            <text x="16" y="26" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Doctor view</text>
+            <text x="16" y="44" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">Patients who shared their data, most urgent first</text>
+            <rect x="436" y="12" width="68" height="22" rx="11" fill="var(--accsoft)"/>
+            <text x="470" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" fill="var(--acc)">LIVE</text>
+            <rect x="16" y="62" width="488" height="46" rx="10" fill="var(--surf)" stroke="var(--acc)" stroke-width="1.5"/><text x="32" y="82" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Ananya, 24</text><text x="32" y="98" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">PCOS · 1 open alert</text><rect x="368.6" y="75" width="121.39999999999999" height="20" rx="10" fill="var(--accsoft)"/><text x="429.3" y="89" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="500" fill="var(--acc)">Within a few weeks</text><rect x="16" y="116" width="488" height="46" rx="10" fill="var(--surf)" stroke="var(--line)" stroke-width="1"/><text x="32" y="136" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Meera, 31</text><text x="32" y="152" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">Anaemia · 1 open alert</text><rect x="368.6" y="129" width="121.39999999999999" height="20" rx="10" fill="var(--accsoft)"/><text x="429.3" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="500" fill="var(--acc)">Within a few weeks</text><rect x="16" y="170" width="488" height="46" rx="10" fill="var(--surf)" stroke="var(--line)" stroke-width="1"/><text x="32" y="190" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Riya, 27</text><text x="32" y="206" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">Endometriosis · 1 open alert</text><rect x="368.6" y="183" width="121.39999999999999" height="20" rx="10" fill="var(--accsoft)"/><text x="429.3" y="197" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="500" fill="var(--acc)">Within a few weeks</text><rect x="16" y="224" width="488" height="46" rx="10" fill="var(--surf)" stroke="var(--line)" stroke-width="1"/><text x="32" y="244" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Sunita, 46</text><text x="32" y="260" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">Perimenopause · 1 open alert</text><rect x="374.9" y="237" width="115.1" height="20" rx="10" fill="var(--surf2)"/><text x="432.45" y="251" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="500" fill="var(--ink2)">Keep an eye on it</text><rect x="16" y="278" width="488" height="46" rx="10" fill="var(--surf)" stroke="var(--line)" stroke-width="1"/><text x="32" y="298" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">Kavya, 22</text><text x="32" y="314" font-family="Inter,sans-serif" font-size="11" fill="var(--ink3)">Not sure yet · 0 open alerts</text><rect x="425.3" y="291" width="64.69999999999999" height="20" rx="10" fill="var(--surf2)"/><text x="457.65" y="305" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="500" fill="var(--ink2)">All clear</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">

@@ -222,6 +222,29 @@ Settings → Pages and tick **Enforce HTTPS**.
 
 ---
 
+## The live CDSS portal (`portal/` folder)
+
+The website links to a working demo of the clinical decision support portal,
+which lives in the `portal/` folder (`portal/index.html` and `portal/app.js`).
+
+Visitors reach it from:
+
+- the **"Try the live portal"** button in the home page hero,
+- the **"Try the clinical decision support portal"** section just below the hero,
+- **Demo** in the top menu, and **Live demo: CDSS portal** in the mobile menu.
+
+Inside the portal, **← Valkyria site** in the top bar takes them back.
+
+**Upload the `portal` folder together with `index.html`** (GitHub: Add file →
+Upload files, drag in the folder). Once live, the portal is at
+`https://<your-username>.github.io/valkyria-site/portal/`, or
+`https://valkyria.health/portal/` with the custom domain.
+
+The portal runs entirely in the browser. Nothing a visitor types is sent
+anywhere, and it resets when the page reloads.
+
+---
+
 ## Troubleshooting
 
 **"We couldn't submit that automatically"**
